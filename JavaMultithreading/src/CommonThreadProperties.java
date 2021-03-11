@@ -9,16 +9,15 @@ public class CommonThreadProperties {
             System.out.println(a + b);
         };
 
-        Thread t=new Thread(r,"I,am A Thread!");
-        t.setDaemon(true);
-        long id=t.getId();
-        if(t.isDaemon())
-        {
+        Thread t = new Thread(r, "I,am A Thread!");
+        t.setDaemon(true);// This is a special thread which ends after all the other threads end!
+        long id = t.getId();
+        if (t.isDaemon()) {
             System.out.println("I am a daemon Thread");
         }
-       // Thread.MAX_PRIORITY;--> 10
-       // Thread.MIN_PRIORITY; --> 0
-        //Thread.NORM_PRIORITY; ---> 5
+        // Thread.MAX_PRIORITY;--> 10
+        // Thread.MIN_PRIORITY; --> 0
+        // Thread.NORM_PRIORITY; ---> 5
         t.setPriority(3);
 
     }
